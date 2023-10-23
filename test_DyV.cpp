@@ -10,4 +10,7 @@ int main(){
 		BusquedaBinaria(x, v, ini, fin);
 	else 
 		BusquedaBinaria_INV(x, v, ini, fin);
+	
+	QuickSort(V, ini, fin); 
+
 }

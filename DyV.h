@@ -25,3 +25,25 @@ void BusquedaBinaria_INV (int x, std::vector<int>& v, int ini, int fin){
                 return BusquedaBinaria(x, v, medio + 1, fin);
 
 }
+
+void QuickSort (std::vector<int>& v, int ini, int fin){
+	if(ini < fin){
+		int pivot = Partition(v, ini, fin);
+		QuickSort(v, ini, pivot - 1);
+		QuickSort(v, pivot + 1, fin);
+	}
+}
+
+void Partition (std::vector<int>& v, int ini, int fin){
+	int x = v[fin];
+	int i = ini;
+	for(int j = ini; j < fin; j++){
+		if(v[j] <= x){
+			int aux = v[i];
+			v[i] = v[j];
+			v[j] = aux;
+			i++;
+		}
+	}
+
+}
